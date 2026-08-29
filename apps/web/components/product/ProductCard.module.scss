@@ -1,0 +1,60 @@
+.card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255,255,255,.78);
+  box-shadow: var(--shadow);
+}
+
+.imageWrap {
+  position: relative;
+  display: block;
+  aspect-ratio: 1.12;
+  overflow: hidden;
+
+  img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+  span {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--green);
+    font-size: .76rem;
+    font-weight: 900;
+  }
+}
+
+.card:hover img { transform: scale(1.05); }
+
+.body { padding: 16px; }
+.body p { margin: 0 0 7px; color: var(--olive); font-weight: 800; font-size: .78rem; }
+.body h3 { color: var(--green); margin: 0; line-height: 1.25; font-size: 1.05rem; }
+
+.rating, .price, .actions {
+  display: flex;
+  align-items: center;
+}
+
+.rating { gap: 6px; color: var(--mustard); margin: 12px 0; font-weight: 900; }
+.price { gap: 10px; margin-bottom: 14px; }
+.price strong { color: var(--brown); font-size: 1.2rem; }
+.price del { color: var(--muted); }
+
+.actions {
+  gap: 8px;
+
+  button {
+    min-height: 42px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(24,63,44,.08);
+    color: var(--green);
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  button:first-child { width: 42px; display: grid; place-items: center; }
+  button:last-child { flex: 1; display: inline-flex; justify-content: center; align-items: center; gap: 8px; background: var(--green); color: var(--white); }
+}
