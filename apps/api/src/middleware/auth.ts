@@ -34,3 +34,19 @@ export const requireRole =
     }
     next();
   };
+
+export const optionalAuth = (req: Request, _res: Response, next: NextFunction) => {
+  const header = req.headers.authorization;
+  const token = header?.startsWith("Bearer ") ? header.slice(7) : req.cookies?.accessToken;
+  if (!token) {
+    return next();
+  }
+
+  try {
+    req.user = jwt.verify(token, env.JWT_ACCESS_SECRET) as AuthUser;
+  } catch {
+    // Silently continue for optionalAuth
+  }
+  next();
+};
+

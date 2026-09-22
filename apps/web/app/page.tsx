@@ -1,29 +1,34 @@
-import { ArrowRight, Leaf, ShieldCheck, Sparkles, Truck } from "lucide-react";
+import { Leaf, ShieldCheck, Sparkles, Truck } from "lucide-react";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
-import { ProductCard } from "@/components/product/ProductCard";
-import { categories, processSteps, products, reviews } from "@/lib/data";
+import { processSteps, reviews } from "@/lib/data";
 import styles from "./page.module.scss";
 
 export default function HomePage() {
     return (
         <>
             <Hero />
-            <section className="section page">
-                <div className={styles.sectionHead}>
-                    <div>
-                        <span className="eyebrow">Featured pickles</span>
-                        <h2 className="title">Small-batch favourites</h2>
-                    </div>
-                    <Link className="button secondary" href="/shop">View all <ArrowRight size={18} /></Link>
-                </div>
-                <div className="grid">{products.map((product) => <ProductCard key={product.slug} product={product} />)}</div>
-            </section>
             <section className={styles.band}>
-                <div className="page">
-                    <span className="eyebrow">Categories</span>
-                    <h2 className="title">Every craving has a jar</h2>
-                    <div className={styles.chips}>{categories.map((category) => <Link key={category} href={`/shop?category=${encodeURIComponent(category)}`}>{category}</Link>)}</div>
+                <div className="page" style={{ textAlign: "center" }}>
+                    <span className="eyebrow" style={{ justifyContent: "center" }}>Categories</span>
+                    <h2 className="title" style={{ textAlign: "center", marginBottom: "8px" }}>Every Craving Has a Jar</h2>
+                    <p className="subtitle" style={{ maxWidth: "580px", margin: "0 auto 28px", textAlign: "center" }}>
+                        Explore authentic Andhra handmade pickles, sun-cured with stone-ground spices and pure cold-pressed oil.
+                    </p>
+                    <div className={styles.chips}>
+                        <Link href="/shop">All Pickles</Link>
+                        <Link href="/shop?category=all-time">All-Time Classics</Link>
+                        <Link href="/shop?category=seasonal">Seasonal Specials</Link>
+                        <Link href="/shop?category=non-veg">Non-Veg Pickles</Link>
+                        <Link href="/shop?category=combos">Combos &amp; Gift Boxes</Link>
+                        <Link href="/shop?category=Mango%20Pickle">Avakaya Mango</Link>
+                        <Link href="/shop?category=Gongura%20Pickle">Gongura Leaf</Link>
+                        <Link href="/shop?category=Garlic%20Pickle">Spicy Garlic</Link>
+                        <Link href="/shop?category=Tomato%20Pickle">Andhra Tomato</Link>
+                        <Link href="/shop?category=Chicken%20Pickle">Country Chicken</Link>
+                        <Link href="/shop?category=Mutton%20Pickle">Andhra Mutton</Link>
+                        <Link href="/shop?category=Amla%20Pickle">Usirikaya (Amla)</Link>
+                    </div>
                 </div>
             </section>
             <section className="section page">

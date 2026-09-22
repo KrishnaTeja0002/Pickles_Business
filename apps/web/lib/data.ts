@@ -1,21 +1,19 @@
 export const categories = [
     "Mango Pickle",
-    "Lemon Pickle",
+    "Gongura Pickle",
     "Garlic Pickle",
     "Tomato Pickle",
-    "Gongura Pickle",
+    "Lemon Pickle",
     "Chicken Pickle",
     "Mutton Pickle",
-    "Fish Pickle",
-    "Prawn Pickle",
-    "Mixed Pickle",
+    "Ginger Pickle",
     "Amla Pickle",
-    "Green Chilli Pickle",
-    "Seasonal Specials",
-    "Gift Boxes"
+    "Mixed Pickle",
+    "Combo Packs",
+    "Gift Packs"
 ];
 
-export const filterCategories = ["Seasonal", "Unseasonal", "Non veg"];
+export const filterCategories = ["Vegetarian", "Non-Vegetarian", "Combos & Gifts", "Seasonal"];
 
 export const products = [
     {
@@ -26,13 +24,13 @@ export const products = [
         mrp: 229,
         rating: 4.9,
         image: "/products/avakaya.png",
-        tag: "Best seller",
-        description: "Sun-cured mango, cold-pressed sesame oil, mustard, chilli, and family spice balance.",
-        ingredients: ["Raw mango", "Sesame oil", "Mustard", "Red chilli", "Rock salt"],
+        tag: "Best Seller",
+        description: "Sun-cured raw mango pieces marinated in cold-pressed sesame oil, Guntur red chilli, and mustard powder.",
+        ingredients: ["Raw mango", "Cold-pressed sesame oil", "Mustard powder", "Red chilli", "Rock salt", "Garlic"],
         nutrition: "Energy 62 kcal, fat 5g, carbohydrates 3g per serving",
         shelfLife: "9 months",
-        storage: "Use a dry spoon and store in a cool place.",
-        process: "Washed, air-dried, hand-cut, spice-coated, oil-matured, and batch-tested."
+        storage: "Use a dry spoon and store in a cool place under oil seal.",
+        process: "Hand-cut raw mangoes sun-dried, coated with freshly pounded spices, oil-matured for 7 days."
     },
     {
         name: "Gongura Leaf Pickle",
@@ -42,13 +40,45 @@ export const products = [
         mrp: 199,
         rating: 4.8,
         image: "/products/gongura.png",
-        tag: "Tangy",
-        description: "Sour gongura leaves tempered with garlic, chilli, and roasted lentil spice.",
-        ingredients: ["Gongura", "Garlic", "Chilli", "Fenugreek", "Groundnut oil"],
+        tag: "Tangy & Spicy",
+        description: "Tangy red-stemmed gongura leaves stone-ground with garlic, roasted cumin, and Andhra spices.",
+        ingredients: ["Gongura leaves", "Garlic cloves", "Red chilli", "Fenugreek", "Groundnut oil", "Salt"],
         nutrition: "Energy 54 kcal, fat 4g, iron-rich greens per serving",
         shelfLife: "6 months",
-        storage: "Refrigerate after opening for freshest aroma.",
-        process: "Leaves are cleaned, wilted, stone-ground, tempered, and rested overnight."
+        storage: "Keep refrigerated after opening for freshest aroma.",
+        process: "Wilted gongura leaves stone-pounded, tempered with whole spices in fresh groundnut oil."
+    },
+    {
+        name: "Spicy Garlic Pickle (Vellulli Pachadi)",
+        slug: "spicy-garlic-pickle",
+        category: "Garlic Pickle",
+        price: 179,
+        mrp: 219,
+        rating: 4.8,
+        image: "/products/garlic.jpg",
+        tag: "Hearty & Pungent",
+        description: "Whole peeled garlic cloves slow-cooked in aromatic mustard-chilli tempering with gingelly oil.",
+        ingredients: ["Garlic cloves", "Sesame oil", "Guntur red chilli", "Mustard seeds", "Tamarind", "Salt"],
+        nutrition: "Energy 58 kcal, fat 4.5g per serving",
+        shelfLife: "12 months",
+        storage: "Store at room temperature in a dry place.",
+        process: "Hand-peeled garlic cloves gently tempered and matured in oil for deep mellow richness."
+    },
+    {
+        name: "Authentic Andhra Tomato Pickle",
+        slug: "tomato-pickle",
+        category: "Tomato Pickle",
+        price: 159,
+        mrp: 189,
+        rating: 4.8,
+        image: "/products/tomato.jpg",
+        tag: "Rich & Tangy",
+        description: "Sun-ripened country tomatoes slow-simmered with tamarind pulp, jaggery, curry leaves, and mustard tempering.",
+        ingredients: ["Ripe tomatoes", "Tamarind", "Mustard", "Red chilli", "Curry leaves", "Groundnut oil"],
+        nutrition: "Energy 48 kcal, carbs 5g per serving",
+        shelfLife: "6 months",
+        storage: "Refrigerate after opening.",
+        process: "Tomatoes slow-reduced with tamarind and jaggery, tempered with roasted spices in pure oil."
     },
     {
         name: "Natu Kodi Chicken Pickle",
@@ -58,36 +88,140 @@ export const products = [
         mrp: 399,
         rating: 4.9,
         image: "/products/chicken.png",
-        tag: "Protein rich",
-        description: "Boneless chicken cooked low and slow in a deeply aromatic Andhra masala.",
-        ingredients: ["Chicken", "Ginger garlic", "Chilli", "Garam masala", "Oil"],
+        tag: "Non-Veg Favourite",
+        description: "Tender boneless country chicken slow-cooked in fiery Andhra masala, ginger-garlic, and cold-pressed oil.",
+        ingredients: ["Boneless chicken", "Ginger garlic paste", "Red chilli", "Garam masala", "Sesame oil", "Salt"],
         nutrition: "Energy 110 kcal, protein 9g, fat 7g per serving",
         shelfLife: "4 months",
-        storage: "Keep refrigerated after opening.",
-        process: "Marinated, slow-cooked, oil-sealed, packed in sterilized jars."
+        storage: "Keep refrigerated for maximum freshness.",
+        process: "Crisp-fried tender meat steeped in thick masala gravy and sealed in sterile jars."
     },
     {
-        name: "Lemon Turmeric Pickle",
+        name: "Spicy Andhra Mutton Pickle",
+        slug: "mutton-pickle",
+        category: "Mutton Pickle",
+        price: 449,
+        mrp: 499,
+        rating: 4.9,
+        image: "/products/mutton.png",
+        tag: "Rich Non-Veg",
+        description: "Succulent boneless mutton cooked until tender in an aromatic blend of roasted spices and rich oil gravy.",
+        ingredients: ["Boneless mutton", "Ginger garlic paste", "Coriander", "Cinnamon", "Cloves", "Red chilli", "Oil"],
+        nutrition: "Energy 135 kcal, protein 11g per serving",
+        shelfLife: "3 months",
+        storage: "Always keep refrigerated.",
+        process: "Slow-roasted tender meat immersed in slow-simmered rich Andhra gravy."
+    },
+    {
+        name: "Lemon Turmeric Pickle (Nimmakaya)",
         slug: "lemon-turmeric-pickle",
         category: "Lemon Pickle",
         price: 149,
         mrp: 179,
         rating: 4.7,
         image: "/products/lemon.png",
-        tag: "Classic",
-        description: "Juicy lemons aged with turmeric, mustard, chilli, and mineral salt.",
-        ingredients: ["Lemon", "Turmeric", "Mustard", "Chilli", "Salt"],
-        nutrition: "Energy 38 kcal, vitamin C source per serving",
+        tag: "Digestive Classic",
+        description: "Juicy thin-skinned lemons aged with fresh turmeric, yellow mustard, red chilli, and mineral rock salt.",
+        ingredients: ["Lemon", "Turmeric root", "Mustard seeds", "Red chilli", "Rock salt"],
+        nutrition: "Energy 38 kcal, rich in Vitamin C per serving",
         shelfLife: "8 months",
-        storage: "Store away from direct sunlight.",
-        process: "Quartered lemons are salt-cured, spiced, and matured naturally."
+        storage: "Store away from direct moisture.",
+        process: "Quartered country lemons cured in salt brine then dressed with aromatic spice mix."
+    },
+    {
+        name: "Allam (Ginger) Pickle",
+        slug: "allam-ginger-pickle",
+        category: "Ginger Pickle",
+        price: 169,
+        mrp: 199,
+        rating: 4.8,
+        image: "/products/ginger.png",
+        tag: "Zesty & Warm",
+        description: "Fresh country ginger ground with jaggery and tamarind, tempered with mustard and dried red chillies.",
+        ingredients: ["Fresh ginger", "Jaggery", "Tamarind", "Red chilli", "Mustard", "Sesame oil"],
+        nutrition: "Energy 50 kcal, digestive wellness per serving",
+        shelfLife: "6 months",
+        storage: "Keep in a cool and dry cupboard.",
+        process: "Cleaned fresh ginger stone-ground with sweet jaggery and tangy tamarind."
+    },
+    {
+        name: "Amla (Gooseberry) Pickle (Usirikaya)",
+        slug: "amla-pickle",
+        category: "Amla Pickle",
+        price: 179,
+        mrp: 209,
+        rating: 4.8,
+        image: "/products/amla.png",
+        tag: "Vitamin C Rich",
+        description: "Whole seasonal Indian gooseberries slit and cured with turmeric, mustard powder, and sesame oil.",
+        ingredients: ["Whole amla", "Mustard powder", "Red chilli", "Turmeric", "Sesame oil", "Salt"],
+        nutrition: "Energy 42 kcal, antioxidant rich per serving",
+        shelfLife: "9 months",
+        storage: "Keep well submerged under oil cover.",
+        process: "Steamed wild amla steeped in fragrant sesame oil and stone-ground spices."
+    },
+    {
+        name: "Mixed Vegetable Pachadi",
+        slug: "mixed-vegetable-pickle",
+        category: "Mixed Pickle",
+        price: 159,
+        mrp: 189,
+        rating: 4.7,
+        image: "/products/mixed.png",
+        tag: "Everyday Classic",
+        description: "Crispy carrots, cauliflower florets, raw mango, and green chillies cured in traditional Andhra spices.",
+        ingredients: ["Carrots", "Cauliflower", "Raw mango", "Green chilli", "Mustard", "Oil", "Salt"],
+        nutrition: "Energy 45 kcal per serving",
+        shelfLife: "6 months",
+        storage: "Keep in cool storage.",
+        process: "Assorted fresh vegetables salted, sun-wilted, and blended with homemade masala."
+    },
+    {
+        name: "Andhra Pachallu Trio Combo (3-Pack)",
+        slug: "andhra-pachallu-combo-3-pack",
+        category: "Combo Packs",
+        price: 499,
+        mrp: 599,
+        rating: 4.9,
+        image: "/products/combo.png",
+        tag: "Value Pack",
+        description: "The classic trinity of Andhra dining: Avakaya Mango, Gongura Leaf, and Spicy Garlic (3 × 350g jars).",
+        ingredients: ["Avakaya mango", "Gongura leaf", "Garlic pachadi"],
+        nutrition: "Varies by pickle selection",
+        shelfLife: "6-9 months",
+        storage: "Store jars separately in cool cupboard.",
+        process: "Curated selection of our three most requested authentic batches."
+    },
+    {
+        name: "Heritage Festival Gift Box (6-Pack)",
+        slug: "premium-gift-box-6-pack",
+        category: "Gift Packs",
+        price: 999,
+        mrp: 1199,
+        rating: 5.0,
+        image: "/products/gift.png",
+        tag: "Festive Gift",
+        description: "Handcrafted festive box with six signature Andhra pickles, personalized greeting card, and airtight seals.",
+        ingredients: ["Avakaya", "Gongura", "Garlic", "Tomato", "Lemon", "Chicken/Ginger"],
+        nutrition: "Assorted authentic Andhra flavors",
+        shelfLife: "6-9 months",
+        storage: "Room temperature away from direct sunlight.",
+        process: "Gift boxed in artisanal packaging with custom seal and greeting card."
     }
 ];
 
 export const reviews = [
     { name: "Ananya R.", text: "Tastes exactly like my grandmother's avakaya. The oil and spice balance is beautiful.", rating: 5 },
     { name: "Vikram S.", text: "Fast delivery, premium packing, and the gongura has that proper home kitchen punch.", rating: 5 },
-    { name: "Meera K.", text: "Gifted the pickle box for a housewarming. Everyone asked where it came from.", rating: 5 }
+    { name: "Meera K.", text: "Gifted the pickle box for a housewarming. Everyone asked where it came from.", rating: 5 },
+    { name: "Rao Venkatesh", text: "Zero chemical preservatives, crisp mango pieces, and proper Guntur chilli pungency!", rating: 5 }
 ];
 
-export const processSteps = ["Select seasonal produce", "Wash and sun-dry", "Hand-cut every batch", "Roast and grind spices", "Oil mature naturally", "Pack in sterilized jars"];
+export const processSteps = [
+    "Select seasonal farm-fresh produce",
+    "Wash and sun-cure on cotton cloth",
+    "Hand-cut every batch by traditional masters",
+    "Slow-roast and stone-grind authentic spices",
+    "Cold-pressed gingelly oil maturation",
+    "Vacuum-pack in airtight food-grade jars"
+];
